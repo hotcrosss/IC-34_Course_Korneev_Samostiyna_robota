@@ -12,7 +12,7 @@
     <h1>Мій перший заголовок</h1>
     <p>Мій перший параграф.</p>
     <br>
-    <h1 class="hd" > 1.3 HTML Основні приклади.</h1>
+    <h1 class="hd" id="OP"> 1.3 HTML Основні приклади.</h1>
     <h3 class="hd3">HTML заголовки</h3>
     <h1>Це заголовок 1</h1>
     <h2>Це заголовок 2</h2>
@@ -103,5 +103,49 @@
     </pre>
     <h3 class="hd3">HTML вправа</h3>
     <p>Hello World!</p>
+    <h1 class="hd">1.7 HTML Посилання (1.7.1-1.7.2)</h1>
+    <h3 class="hd3">HTML Посилання - Синтаксис</h3>
+    <a href="https://www.w3schools.com/html/">HTML уроки для початківців онлайн</a>
+    <h3 class="hd3">Локальні посилання</h3>
+    <a href="html_images.html">HTML Зображення</a>
+    <h3 class="hd3">HTML Кольори посилань</h3>
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: pink;
+          background-color: transparent;
+         text-decoration: none;
+        }
+        
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: yellow;
+          background-color: transparent;
+         text-decoration: underline;
+        }
+        </style>
+    <h3 class="hd3">HTML посилання - Атрибут target</h3>
+    <a href="https://www.w3schools.com/" target="_blank">Відвідайте W3Schools!</a>
+    <a href="https://www.w3schools.com/html/" target="_top">HTML5 Підручник!</a>
+    <h3 class="hd3">HTML Посилання - Зображення як посилання</h3>
+    <a href="index.html">
+        <img src="img/prog.jfif" alt="HTML уроки для початківців" style="width:42px;height:42px;border:0;">
+    </a>
+    <h3 class="hd3">Атрибут Title - Підказка для посилань</h3>
+    <a href="https://www.w3schools.com/html/" title="Перейти на уроки по HTML для початківців">Уроки по HTML для початківців</a>
+    <h3 class="hd3">HTML Посилання - Як створити закладку</h3>
+    <a href="#OP">Перейти до основних прикладів</a>
+    <h3 class="hd3">Зовнішні шляхи</h3>
+    <a href="https://w3schoolsua.github.io/html/index.html">HTML підручник</a>
 </body>
 </html>
