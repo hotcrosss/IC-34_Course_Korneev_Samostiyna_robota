@@ -4,3 +4,36 @@
 .hd3{
     color: coral;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  #t01 tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  #t01 th {
+    color: white;
+    background-color: black;
+  }
+  .tb1{
+    border: 1px solid white;
+    background-color: #96D4D4;
+  }
+ .tb2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    border-collapse: separate;
+ }
+ .tb3{
+    border-spacing: 30px;
+    border-collapse: separate;
+ }

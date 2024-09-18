@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>samostiyna robota</title>
     <link rel="stylesheet" href="styles.css">
+    <link id="FV" rel="icon" type="image/x-icon" href="img/analysis_6068105.png">
 </head>
 <body>
     <h1 class="hd">1.1 Що таке HTML?</h1>
@@ -169,12 +170,776 @@
     <h3 class="hd3">Плаваюче зображення</h3>
     <p><img src="img/pic3.jfif" alt="Photo" style="float:right;width:42px;height:42px;">Зображення буде плавати праворуч від тексту.</p>
     <p><img src="img/pic3.jfif" alt="Photo" style="float:left;width:42px;height:42px;">Зображення буде плавати ліворуч від тексту.</p>
-    <h3 class="hd3">1.8.1 Карти зображень</h3>
+    <h1 class="hd">1.8.1 Карти зображень</h1>
     <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap">
     <map name="workmap">
         <area shape="rect" coords="34,44,270,350" alt="Комп’ютер" href="computer.html">
         <area shape="rect" coords="290,172,333,250" alt="Телефон" href="phone.html">
         <area shape="circle" coords="337,300,44" alt="Кава" href="coffee.html">
     </map>
+    <h1 class="hd">1.8.2 HTML Фонові зображення</h1>
+    <div style="background-image: url('img/pic2.jfif');">background-image</div>
+    <h3 class="hd3">Повторення фону</h3>
+    <div style="background-image: url('img/pic2.jfif');">background-image</div>
+    <div style="background-image: url('img/pic2.jfif'); background-repeat: no-repeat;">background-image</div>
+    <h3 class="hd3">Фон обкладинки</h3>
+    <div style="width: 500; height: 400; background-image: url('img/pic3.jfif'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">COVER</div>
+    <h1 class="hd">1.8.3 HTML елемент picture </h1>
+    <picture>
+        <source media="(min-width: 650px)" srcset="img/pic1.jfif">
+        <source media="(min-width: 465px)" srcset="img/pic2.jfif">
+        <img src="img/pic3.jfif">
+    </picture>
+    <h1 class="hd">1.8.4 HTML Favicon / Фавікон</h1>
+    <h1 class="hd">1.9 HTML Таблиці</h1>
+    <h3 class="hd3">Визначення HTML Таблиці</h3>
+    <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">HTML таблиця. Як додати межу - border</h3>
+    <table style="width:100%; border: 1px solid black;" >
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">HTML Таблиця. Як додати внутрішній відступ в чарунках - padding</h3>
+    <table style="width:100%">
+        <tr>
+          <th style="padding: 30px;">Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">HTML Таблиця. Як вирівняти заголовки за лівим краєм - text-align</h3>
+    <table style="width:100%">
+        <tr>
+          <th style="text-align: right;">Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Біл</td>
+          <td>Гейтс</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <td>Марк</td>
+          <td>Цукерберг</td>
+          <td>79</td>
+        </tr>
+        <tr>
+          <td>Саша</td>
+          <td>Грей</td>
+          <td>33</td>
+        </tr>
+      </table>
+      <h3 class="hd3">HTML Таблиця. Як додати інтервал між межами - spacing</h3>
+      <table style="width:100%; border-spacing: 5px;">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </table>
+      <h3 class="hd3">HTML Таблиця - Чарунка, що охоплює кілька стовпців</h3>
+      <table style="width:100%">
+        <tr>
+          <th>Ім'я</th>
+          <th colspan="2">Телефон</th>
+        </tr>
+        <tr>
+          <td>Біл Гейтс</td>
+          <td>7-5557785401</td>
+          <td>7-5557785502</td>
+        </tr>
+      </table>
+      <h3 class="hd3">HTML Таблиця - Чарунка, яка охоплює багато рядків</h3>
+      <table style="width:100%">
+        <tr>
+          <th>Name:</th>
+          <td>Bill Gates</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Telephone:</th>
+          <td>55577854</td>
+        </tr>
+        <tr>
+          <td>55577855</td>
+        </tr>
+      </table>
+      <h3 class="hd3">HTML Таблиця - Додати підпис</h3>
+      <table style="width:100%">
+        <caption>Щомісячна економія</caption>
+        <tr>
+          <th>Місяць</th>
+          <th>Економія</th>
+        </tr>
+        <tr>
+          <td>Січень</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Лютий</td>
+          <td>$50</td>
+        </tr>
+      </table>
+      <h3 class="hd3">Спеціальний стиль для однієї таблиці</h3>
+      <table id="t01">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+      <h1 class="hd">1.9.1 HTML Межі таблиці</h1>
+      <h3 class="hd3">Як додати межу</h3>
+      <table style="width:100%" >
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Ілон</td>
+          <td>Маск</td>
+          <td>48</td>
+        </tr>
+        <tr>
+          <td>Володимир</td>
+          <td>Зеленський</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td >Саша</td>
+          <td >Грей</td>
+          <td>33</td>
+        </tr>
+      </table>
+      <h3 class="hd3">Стилізація меж таблиці</h3>
+      <table style="width:100%" class="tb1">
+        <tr>
+          <th class="tb1">Ім'я</th>
+          <th class="tb1">Прізвище</th>
+          <th class="tb1">Вік</th>
+        </tr>
+        <tr>
+          <td class="tb1">Ілон</td>
+          <td class="tb1">Маск</td>
+          <td class="tb1">48</td>
+        </tr>
+        <tr>
+          <td class="tb1">Володимир</td>
+          <td class="tb1">Зеленський</td>
+          <td class="tb1">43</td>
+        </tr>
+        <tr>
+          <td class="tb1">Саша</td>
+          <td class="tb1">Грей</td>
+          <td class="tb1">33</td>
+        </tr>
+      </table>
+     <h1 class="hd">1.9.2 HTML Розмір таблиці</h1>
+     <h3 class="hd3">HTML Ширина таблиці</h3>
+     <table style="width:100%">
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">HTML Ширина стовпців таблиці</h3>
+    <table style="width:100%">
+        <tr>
+          <th style="width:70%">Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">HTML Висота рядка таблиці</h3>
+    <table style="width:100%">
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr style="height:200px">
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+      <h1 class="hd">1.9.3 HTML Заголовки таблиць</h1>
+      <table>
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+      </table>
+    <h3 class="hd3">Заголовки таблиці по вертикалі</h3>      
+    <table>
+        <tr>
+          <th>Ім'я</th>
+          <td>Jill</td>
+          <td>Eve</td>
+        </tr>
+        <tr>
+          <th>Прізвище</th>
+          <td>Smith</td>
+          <td>Jackson</td>
+        </tr>
+        <tr>
+          <th>Вік</th>
+          <td>94</td>
+          <td>50</td>
+        </tr>
+    </table>
+    <h3 class="hd3">Заголовок для кількох стовпців</h3>
+    <table>
+        <tr>
+          <th colspan="2">Ім'я</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+    </table>
+    <h3 class="hd3">Заголовок (підпис) таблиці</h3>
+    <table style="width:100%">
+        <caption>Щомісячна економія</caption>
+        <tr>
+          <th>Місяць</th>
+          <th>Економія</th>
+        </tr>
+        <tr>
+          <td>Січень</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Лютий</td>
+          <td>$50</td>
+        </tr>
+    </table>
+    <h1 class="hd">1.9.4 HTML Таблиці. Padding & Spacing</h1>
+    <h3 class="hd3">HTML Таблиця - Cell Padding</h3>
+    <table style="width:100%" class="tb2">
+        <tr>
+          <th class="tb2">Ім'я</th>
+          <th class="tb2">Прізвище</th>
+          <th class="tb2">Вік</th>
+        </tr>
+        <tr>
+          <td class="tb2">Ілон</td>
+          <td class="tb2">Маск</td>
+          <td class="tb2">48</td>
+        </tr>
+        <tr>
+          <td class="tb2">Володимир</td>
+          <td class="tb2">Зеленський</td>
+          <td class="tb2">43</td>
+        </tr>
+        <tr>
+          <td class="tb2">Саша</td>
+          <td class="tb2">Грей</td>
+          <td class="tb2">33</td>
+        </tr>
+      </table>
+
+      <h3 class="hd3">HTML Таблиця - Cell Spacing</h3>
+      <table style="width:100%" class="tb3">
+        <tr>
+          <th class="tb3">Ім'я</th>
+          <th class="tb3">Прізвище</th>
+          <th class="tb3">Вік</th>
+        </tr>
+        <tr>
+          <td class="tb3">Ілон</td>
+          <td class="tb3">Маск</td>
+          <td class="tb3">48</td>
+        </tr>
+        <tr>
+          <td class="tb3">Володимир</td>
+          <td class="tb3">Зеленський</td>
+          <td class="tb3">43</td>
+        </tr>
+        <tr>
+          <td class="tb3">Саша</td>
+          <td class="tb3">Грей</td>
+          <td class="tb3">33</td>
+        </tr>
+      </table>
+      <h1 class="hd">1.9.5 HTML Таблиці. Colspan & Rowspan.</h1>
+      <h3 class="hd3">HTML Таблиця - Colspan</h3>
+      <table>
+        <tr>
+          <th colspan="2">Ім’я</th>
+          <th>Вік</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>57</td>
+        </tr>
+      </table>
+      <h3 class="hd3">HTML Таблиця - Rowspan</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>Jill</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Phone</th>
+          <td>555-1234</td>
+        </tr>
+        <tr>
+          <td>555-8745</td>
+      </tr>
+      </table>
+      <h1 class="hd">HTML Стилізація таблиць</h1>
+      <h3 class="hd3">HTML-таблиця – Смуги зебри</h3>
+      <table>
+        <tr style="background-color: #D6EEEE;">
+        <th>Ім’я</th>
+        <th>Прізвище</th>
+        <th>Зарплата</th>
+        </tr>
+        <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+        </tr>
+        <tr style="background-color: #D6EEEE;">
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+        </tr>
+        <tr >
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+        </tr>
+        <tr style="background-color: #D6EEEE;">
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+        </tr>
+      </table>
+     <h1 class="hd">1.9.7 HTML Група стовпців таблиці</h1>
+     <table style="width: 100%;">
+        <colgroup>
+          <col span="2" style="background-color: #D6EEEE">
+        </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+      </table>
+    <h3 class="hd3">Кілька елементів Col</h3>
+    <table style="width: 100%;">
+        <colgroup>
+          <col span="2" style="background-color: #D6EEEE">
+          <col span="3" style="background-color: pink">
+        </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+      </table>
+      <h3 class="hd3">Пусті групи стовпців</h3>
+      <table style="width: 100%;">
+        <colgroup>
+          <col span="3">
+          <col span="2" style="background-color: pink">
+        </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+      </table>
+      <h3 class="hd3">Приховати стовпці</h3>
+      <table style="width: 100%;">
+        <colgroup>
+            <col span="2">
+            <col span="3" style="visibility: collapse">
+          </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+      </table>
+    <h1 class="hd">1.10 HTML Списки (1.10.1-1.10.3)</h1>
+    <h3 class="hd3">HTML Приклад списку</h3>
+    <h2>Невпорядкований список HTML</h2>
+
+    <ul>
+        <li>Кава</li>
+        <li>Чай</li>
+        <li>Молоко</li>
+    </ul>
+
+    <h2>Впорядкований список HTML</h2>
+
+    <ol>
+        <li>Кава</li>
+        <li>Чай</li>
+        <li>Молоко</li>
+    </ol>
+    <h3 class="hd3">Невпорядкований HTML Список</h3>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3 class="hd3">Невпорядкований HTML Список - оберіть маркер елемента списка</h3> 
+    <h3 class="hd3">Приклад - Disc</h3> 
+    <ul style="list-style-type:disc;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3 class="hd3">Приклад - Circle</h3>
+    <ul style="list-style-type:circle;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3 class="hd3">Приклад - Square</h3>
+    <ul style="list-style-type:square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3 class="hd3">Приклад - None</h3>
+    <ul style="list-style-type:none;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3 class="hd3">Впорядкований HTML Список</h3>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <h3 class="hd3">Впорядкований HTML Список - Атрибут Type</h3>
+    <ol type="1">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <ol type="A">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <ol type="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <ol type="I">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <ol type="i">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <h3 class="hd3">HTML Списки опису</h3>
+    <dl>
+        <dt>Кава</dt>
+        <dd>- чорний гарячий напій</dd>
+        <dt>Молоко</dt>
+        <dd>- білий холодний напій</dd>
+    </dl>
+    <h3 class="hd3">Вкладені HTML-списки</h3>
+    <ul>
+        <li>Кава</li>
+        <li>Чай
+          <ul>
+            <li>Чорний чай</li>
+            <li>Зелений чай</li>
+          </ul>
+        </li>
+        <li>Молоко</li>
+    </ul>
+    <h3 class="hd3">Підрахунок контрольного списку</h3>
+    <ol start="50">
+        <li>Кава</li>
+        <li>Чай</li>
+        <li>Молоко</li>
+    </ol>
+    
+
+
 </body>
 </html>
